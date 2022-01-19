@@ -1,0 +1,125 @@
+.orders {
+  margin-bottom: 130px;
+
+  @include tablet {
+    margin-bottom: 100px;
+  }
+
+  @include small-tablet {
+    margin-bottom: 20px;
+  }
+}
+
+.orders__container {
+  max-width: 1400px;
+
+  @include tablet {
+    padding: 0;
+  }
+}
+
+.orders__title {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 var(--container-offset);
+  max-width: var(--container-width);
+
+  @include small-tablet {
+    margin-left: 0;
+  }
+}
+
+.orders__slider-wrapper {
+  padding: 40px;
+
+  @include tablet {
+    padding: 40px 20px;
+  }
+
+  @include small-tablet {
+    padding: 30px 15px;
+  }
+}
+
+.order-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 10px;
+  padding: 60px 10px 25px;
+  height: 185px;
+  max-width: 265px;
+  box-shadow: 0 0 40px #9b9b9b;
+  box-sizing: border-box;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    z-index: 2;
+    width: 45px;
+    height: 35px;
+    background-image: url("../img/orders-icon.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translateX(-50%);
+
+    @include l-mobile {
+      width: 35px;
+      height: 30px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 14px;
+    font: 700 20px / 23px var(--font-family-text);
+    text-align: center;
+    text-transform: uppercase;
+
+    @include small-tablet {
+      font-size: 18px;
+    }
+
+    @include l-mobile {
+      margin-bottom: 5px;
+      font-size: 16px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    max-width: 80%;
+    text-align: center;
+
+    @include l-mobile {
+      font-size: 15px;
+    }
+  }
+
+  @include tablet {
+    box-shadow: 0 0 20px #9b9b9b;
+  }
+
+  @include small-tablet {
+    padding: 40px 10px 25px;
+    height: 170px;
+    max-width: 230px;
+  }
+
+  @include small-tablet {
+    height: auto;
+    max-width: 180px;
+  }
+
+  @include l-mobile {
+    padding-top: 30px;
+  }
+
+  @include m-mobile {
+    max-width: none;
+  }
+}

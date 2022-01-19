@@ -1,0 +1,78 @@
+.button {
+  min-width: 100px;
+  font: var(--font-text);
+  color: var(--color-background);
+  cursor: pointer;
+
+  @include xl-mobile {
+    font-size: 17px;
+  }
+
+  @include m-mobile {
+    font-size: 13px;
+  }
+}
+
+.button--main {
+  background-color: var(--color-main);
+  transition: background-color var(--hover-time) ease-in-out;
+
+  &:hover {
+    background-color: var(--color-accent);
+  }
+
+  &:active {
+    background-color: #ea3e3e;
+  }
+}
+
+.button-arrow {
+  --arrow-width: 100px;
+
+  text-align: center;
+
+  a {
+    position: relative;
+    padding-right: calc(var(--arrow-width) + 23px);
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 35px;
+    color: var(--color-text);
+    transition: color var(--hover-time) ease-in-out;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: var(--arrow-width);
+      height: 17px;
+      background-image: url("../img/button-arrow.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+      transition: right var(--hover-time) ease-in-out;
+
+      @include tablet {
+        height: 13px;
+      }
+    }
+
+    &:hover {
+      color: var(--color-accent);
+
+      &::before {
+        right: 10px;
+      }
+    }
+
+    @include tablet {
+      font-size: 20px;
+      line-height: 23px;
+    }
+  }
+
+  @include tablet {
+    --arrow-width: 95px;
+  }
+}

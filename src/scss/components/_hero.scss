@@ -1,0 +1,220 @@
+.hero {
+  margin-bottom: 170px;
+
+  &__container {
+    @include small-tablet {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    display: flex;
+    height: 900px;
+
+    &-controls {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 45px;
+
+      @include big-desktop {
+        padding: 20px;
+      }
+
+      @include small-tablet {
+        display: none;
+      }
+    }
+
+    &-arrow {
+      width: 46px;
+      height: 46px;
+      fill: #5e8fac;
+      transition: fill var(--hover-time) ease-in-out;
+
+      &:hover {
+        fill: var(--color-accent);
+      }
+    }
+
+    &-image {
+      width: 1460px;
+      height: 100%;
+    }
+
+    &-nav {
+      margin-bottom: 70px;
+      cursor: pointer;
+
+      &--prev {
+        transform: rotate(180deg);
+      }
+    }
+
+    &-pagination {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font: var(--font-text);
+      text-transform: uppercase;
+      color: #5e8fac;
+
+      &-decor {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 2px;
+        height: 100px;
+        background-color: #5e8fac;
+      }
+    }
+
+    @include big-desktop {
+      height: 800px;
+    }
+
+    @include tablet {
+      height: 530px;
+    }
+
+    @include xl-mobile {
+      height: 330px;
+    }
+
+    @include m-mobile {
+      height: 250px;
+    }
+  }
+
+  &__slide {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__card {
+    position: absolute;
+    left: 13%;
+    top: 50%;
+    z-index: 5;
+    margin: 0 auto;
+    padding: 42px 75px;
+    max-width: 740px;
+    background: rgb(240 240 240 / 70%);
+    transform: translateY(-50%);
+
+    @include big-desktop {
+      left: 0;
+      padding: 28px 9px;
+      max-width: 490px;
+    }
+
+    @include small-tablet {
+      padding: 28px 20px;
+    }
+
+    @include xl-mobile {
+      padding: 25px 16px;
+      max-width: 330px;
+    }
+
+    @include m-mobile {
+      padding: 13px 10px;
+      max-width: 240px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 42px;
+    font: var(--font-title);
+    color: var(--color-main);
+
+    @include big-desktop {
+      font-size: 50px;
+    }
+
+    @include tablet {
+      margin-bottom: 22px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 20px;
+      font-size: 45px;
+    }
+
+    @include xl-mobile {
+      margin-bottom: 15px;
+      font-size: 27px;
+    }
+
+    @include m-mobile {
+      margin-bottom: 5px;
+      font-size: 26px;
+      line-height: 27px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 70px;
+    font: var(--font-text);
+
+    @include big-desktop {
+      font-size: 25px;
+    }
+
+    @include tablet {
+      margin-bottom: 38px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 40px;
+    }
+
+    @include xl-mobile {
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+
+    @include m-mobile {
+      margin-bottom: 10px;
+      font-size: 12px;
+    }
+  }
+
+  &__button {
+    padding: 28px 92px;
+
+    @include xl-mobile {
+      padding: 18px 65px;
+    }
+
+    @include m-mobile {
+      padding: 12px 32px;
+    }
+  }
+
+  @include tablet {
+    margin-bottom: 120px;
+  }
+
+  @include small-tablet {
+    margin-bottom: 70px;
+  }
+
+  @include xl-mobile {
+    margin-bottom: 40px;
+  }
+
+  @include m-mobile {
+    margin-bottom: 30px;
+  }
+}
+
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .hero__card {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+}

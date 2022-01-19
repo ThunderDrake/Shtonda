@@ -1,0 +1,25 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+
+  --font-family-text: "Roboto", sans-serif;
+  --font-family-header: "Alegreya Sans", sans-serif;
+  --content-width: 1200px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --hover-time: 0.3s;
+
+  // colors
+
+  --color-main: #235572;
+  --color-accent: #ff5b5b;
+  --color-text: #1d1d1d;
+  --color-background: #f3f3f3;
+
+  // fonts
+
+  --font-title: 700 70px var(--font-family-header);
+  --font-headings: 700 60px var(--font-family-header);
+  --font-text: 400 30px var(--font-family-text);
+}
