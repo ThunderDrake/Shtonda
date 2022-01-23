@@ -1,0 +1,134 @@
+.contacts {
+  &__title {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: var(--container-width);
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-end;
+
+    @include xl-mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__list {
+    margin-right: 90px;
+    max-width: 310px;
+
+    &-item {
+      margin-bottom: 50px;
+
+      &-head {
+        margin-bottom: 15px;
+        font-size: 30px;
+        line-height: 35px;
+
+        @include small-tablet {
+          font-size: 25px;
+          line-height: 29px;
+        }
+
+        @include xl-mobile {
+          margin-bottom: 5px;
+          font-size: 20px;
+          line-height: 23px;
+        }
+      }
+
+      &-text {
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 35px;
+        color: #000;
+
+        @include small-tablet {
+          font-size: 25px;
+          line-height: 29px;
+        }
+
+        @include xl-mobile {
+          font-size: 20px;
+          line-height: 23px;
+        }
+      }
+
+      @include small-tablet {
+        margin-bottom: 35px;
+      }
+
+      @include xl-mobile {
+        margin-bottom: 30px;
+      }
+    }
+
+    @include tablet {
+      margin-right: 50px;
+    }
+
+    @include small-tablet {
+      margin-right: 30px;
+    }
+
+    @include xl-mobile {
+      margin-right: 0;
+      margin-bottom: 20px;
+      max-width: none;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-icon {
+      svg {
+        width: 42px;
+        height: 42px;
+
+        @include xl-mobile {
+          width: 35px;
+          height: 35px;
+        }
+      }
+
+      @include xl-mobile {
+        margin-right: 20px;
+      }
+    }
+
+    @include xl-mobile {
+      justify-content: flex-start;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 45px;
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__map-container {
+    width: 100%;
+    max-width: 1160px;
+
+    @include big-desktop {
+      max-width: 65%;
+    }
+
+    @include tablet {
+      height: auto;
+      max-width: 60%;
+    }
+
+    @include xl-mobile {
+      height: 300px;
+      max-width: none;
+    }
+  }
+}

@@ -1,6 +1,4 @@
 .hero {
-  margin-bottom: 170px;
-
   &__container {
     @include small-tablet {
       padding-right: 0;
@@ -193,22 +191,6 @@
     @include m-mobile {
       padding: 12px 32px;
     }
-  }
-
-  @include tablet {
-    margin-bottom: 120px;
-  }
-
-  @include small-tablet {
-    margin-bottom: 70px;
-  }
-
-  @include xl-mobile {
-    margin-bottom: 40px;
-  }
-
-  @include m-mobile {
-    margin-bottom: 30px;
   }
 }
 

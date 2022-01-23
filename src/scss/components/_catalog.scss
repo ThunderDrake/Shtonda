@@ -1,0 +1,224 @@
+.catalog {
+  &__title {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 var(--container-offset);
+    max-width: var(--container-width);
+  }
+
+  &__slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1500px;
+
+    @include tablet {
+      justify-content: space-between;
+    }
+
+    @include xl-mobile {
+      justify-content: center;
+    }
+  }
+
+  &__slider {
+    margin: 0;
+    padding: 0 var(--container-offset);
+    max-width: var(--container-width);
+
+    @include tablet {
+      padding: 0 13px;
+      max-width: 500px;
+    }
+
+    @include xl-mobile {
+      max-width: 275px;
+    }
+
+    @include m-mobile {
+      padding: 0 5px;
+    }
+  }
+
+  &__slider-button {
+    position: relative;
+    flex-shrink: 0;
+    margin-right: 30px;
+    margin-left: 30px;
+    width: 92px;
+    height: 64px;
+    background-color: var(--color-background);
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 100px;
+      height: 17px;
+      background-image: url("../img/button-arrow.svg");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+      transition: left var(--hover-time) ease-in-out, right var(--hover-time) ease-in-out;
+
+      @include xl-mobile {
+        width: 67px;
+        height: 13px;
+      }
+
+      @include m-mobile {
+        width: 34px;
+        height: 6px;
+      }
+    }
+
+    &--prev {
+      &::before {
+        right: 18px;
+
+        @include xl-mobile {
+          right: 6px;
+        }
+
+        @include m-mobile {
+          right: 3px;
+        }
+      }
+
+      &:hover {
+        &::before {
+          right: 25px;
+
+          @include xl-mobile {
+            right: 18px;
+          }
+
+          @include m-mobile {
+            right: 10px;
+          }
+        }
+      }
+    }
+
+    &--next {
+      &::before {
+        left: 18px;
+        transform: translateY(-50%) rotate(180deg);
+
+        @include xl-mobile {
+          left: 6px;
+        }
+
+        @include m-mobile {
+          left: 3px;
+        }
+      }
+
+      &:hover {
+        &::before {
+          left: 25px;
+
+          @include xl-mobile {
+            left: 18px;
+          }
+
+          @include m-mobile {
+            left: 10px;
+          }
+        }
+      }
+    }
+
+    @include xl-mobile {
+      margin: 0;
+      width: 65px;
+      height: 40px;
+    }
+
+    @include m-mobile {
+      width: 33px;
+      height: 20px;
+    }
+  }
+}
+
+.catalog-card {
+  border: 1px solid #000;
+
+  &__number,
+  &__title {
+    font: 500 40px var(--font-family-text);
+
+    @include tablet {
+      font-size: 30px;
+    }
+  }
+
+  &__number {
+    padding: 30px;
+
+    @include tablet {
+      padding: 25px;
+    }
+
+    @include xl-mobile {
+      padding: 15px;
+      font-size: 20px;
+    }
+  }
+
+  &__image {
+    display: block;
+    margin-bottom: 56px;
+    width: 100%;
+
+    @include tablet {
+      margin-bottom: 48px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 40px;
+    }
+
+    @include xl-mobile {
+      margin-bottom: 15px;
+      width: 275px;
+      height: 190px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 54px;
+    padding: 0 30px;
+
+    @include tablet {
+      margin-bottom: 46px;
+      padding: 0 25px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 25px;
+    }
+
+    @include xl-mobile {
+      padding: 0 15px;
+      font-size: 15px;
+    }
+  }
+
+  &__button {
+    margin: 0 30px 30px;
+
+    @include tablet {
+      margin: 0 25px 25px;
+    }
+
+    @include xl-mobile {
+      margin: 0 15px 15px;
+    }
+  }
+}

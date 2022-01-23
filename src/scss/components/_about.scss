@@ -1,0 +1,236 @@
+.about {
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__title {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 var(--container-offset);
+    max-width: var(--container-width);
+
+    @include small-tablet {
+      padding: 0;
+    }
+  }
+
+  &__image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 25px;
+    width: 100%;
+    max-width: 750px;
+
+    @include big-desktop {
+      max-width: 520px;
+    }
+
+    @include tablet {
+      flex-shrink: 0;
+      max-width: 280px;
+    }
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  &__grid-item {
+    margin-right: 25px;
+    margin-bottom: 25px;
+
+    &:nth-child(3) {
+      margin-top: -150px;
+
+      @media (max-width: 1610px) {
+        margin-top: -160px;
+      }
+    }
+
+    @media (max-width: 1610px) {
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    @include big-desktop {
+      img {
+        height: 100%;
+      }
+
+      &:nth-child(1),
+      &:nth-child(3) {
+        width: 300px;
+      }
+
+      &:nth-child(2),
+      &:nth-child(4) {
+        width: 200px;
+      }
+
+      &:nth-child(1) {
+        img {
+          height: auto;
+        }
+      }
+
+      &:nth-child(2) {
+        height: 70%;
+      }
+    }
+
+    @include tablet {
+      &:nth-child(1) {
+        display: none;
+      }
+
+      &:nth-child(3) {
+        order: 2;
+        margin-top: 0;
+        height: 330px;
+      }
+
+      &:nth-child(2),
+      &:nth-child(4) {
+        width: auto;
+        height: 285px;
+
+        img {
+          width: 130px;
+        }
+      }
+    }
+  }
+
+  &__description {
+    max-width: 800px;
+  }
+
+  &__text {
+    margin-bottom: 78px;
+    max-width: 670px;
+    font: var(--font-text);
+
+    span {
+      font-family: var(--font-family-header);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    @include big-desktop {
+      margin-bottom: 56px;
+      max-width: 700px;
+      font-size: 26px;
+    }
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 10px;
+      font-size: 15px;
+      line-height: 18px;
+    }
+
+    @include m-mobile {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    gap: 70px 55px;
+
+    @include big-desktop {
+      gap: 60px 50px;
+    }
+
+    @include tablet {
+      gap: 10px;
+    }
+  }
+
+  &__item {
+    font-size: 30px;
+    line-height: 35px;
+
+    &-number {
+      margin-bottom: 3px;
+      font-family: var(--font-family-header);
+      font-size: 75px;
+      line-height: 90px;
+      color: #255573;
+
+      @include big-desktop {
+        font-size: 70px;
+      }
+
+      @include tablet {
+        margin-bottom: 0;
+        font-size: 65px;
+        line-height: 78px;
+      }
+
+      @include small-tablet {
+        font-size: 50px;
+        line-height: 60px;
+      }
+    }
+
+    &-title {
+      margin: 0;
+      margin-bottom: 16px;
+      font: inherit;
+      font-weight: 500;
+      text-transform: uppercase;
+
+      @include tablet {
+        font-size: 28px;
+        line-height: 33px;
+      }
+
+      @include small-tablet {
+        font-size: 20px;
+        line-height: 23px;
+      }
+
+      @include m-mobile {
+        font-size: 16px;
+        line-height: 18px;
+      }
+
+      @include m-mobile {
+        font-size: 14px;
+        line-height: 15px;
+      }
+    }
+
+    &-text {
+      margin: 0;
+      font-weight: 300;
+
+      @include tablet {
+        font-size: 25px;
+        line-height: 29px;
+      }
+
+      @include small-tablet {
+        font-size: 15px;
+        line-height: 18px;
+      }
+
+      @include m-mobile {
+        font-size: 12px;
+        line-height: 14px;
+      }
+    }
+
+    @include big-desktop {
+      font-size: 26px;
+    }
+  }
+}

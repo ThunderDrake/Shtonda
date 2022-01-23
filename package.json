@@ -55,6 +55,7 @@
   },
   "dependencies": {
     "graph-modal": "^1.0.3",
+    "masonry-layout": "^4.2.2",
     "swiper": "^7.4.1"
   }
 }

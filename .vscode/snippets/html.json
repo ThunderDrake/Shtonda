@@ -121,7 +121,7 @@
       "<picture>",
       "  <source srcset=\"$1.avif\" type=\"image/avif\">",
       "  <source srcset=\"$1.webp\" type=\"image/webp\">",
-      "  <img loading=\"lazy\" src=\"$1.$2\" class=\"image\" width=\"$4\" height=\"$5\" alt=\"$3\">",
+      "  <img loading=\"lazy\" src=\"$1.$2\" class=\"$3\" width=\"$5\" height=\"$6\" alt=\"$4\">",
       "</picture>"
     ],
     "description": "Snippet for basic logo structure"
